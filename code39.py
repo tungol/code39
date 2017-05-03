@@ -48,6 +48,7 @@ encoding = {"10-001": "1",
             "0-00-0-0": "+",
             "00-0-0-0": "%"}
 
+
 def decode(s):
     decoded = []
     index = 0
@@ -63,7 +64,7 @@ def decode(s):
             print("decoding error: whoops")
             print("so far we had: %s" % ''.join(decoded))
             sys.exit()
-        index +=6
+        index += 6
         if index == len(s):
             break
         if index > len(s):
@@ -71,6 +72,7 @@ def decode(s):
             print("so far we had: %s" % ''.join(decoded))
             sys.exit()
     print("%s" % ''.join(decoded))
+
 
 if __name__ == '__main__':
     decode(sys.argv[1])
